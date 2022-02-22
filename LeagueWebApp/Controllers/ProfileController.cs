@@ -12,5 +12,6 @@ namespace LeagueWebApp.Controllers
         {
             return View();
         }
+
     }
 }
