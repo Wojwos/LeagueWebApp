@@ -1,8 +1,9 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿<br />
+<div class="col-6 offset-4">
+    <form asp-action="Index" asp-controller="Profile">
+            <div class="form-inline">
+                <input name="searchName" placeholder="Enter Summoner Name" class="form-control" />
+                <button type="submit" class="btn btn-primary form-control">Search</button>
+            </div>
+    </form>
 </div>
