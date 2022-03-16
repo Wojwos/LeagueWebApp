@@ -1,28 +1,32 @@
 ﻿@model LeagueWebApp.Models.SummonerDTO
-
 <br />
-<div class="container row p-0 m-0">
-    <div class="col-6">
-        <h2 class="text-info">Games Played</h2>
-    </div>
-    <div class="container">
-        <div class="col-3">
-            <label>Summoner:</label>
-            <input asp-for="Name" />
-            <label>Account Level:</label>
-            <input asp-for="SummonerLevel" />
+<div class="container">
+    <div class="container row p-0 m-0">
+        <div class="col-6">
+            <h2 class="text-info">Games Played</h2>
+        </div>
+        <div class="container">
+            <div class="col-3">
+                <label>Summoner:</label>
+                <input asp-for="Name" />
+                <label>Account Level:</label>
+                <input asp-for="SummonerLevel" />
+            </div>
+        </div>
+        <div class="col-12 border p-3">
+            <table id="DT_load" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Champion</th>
+                        <th>Kills</th>
+                        <th>Deaths</th>
+                        <th>Assists</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
-    <div class="col-12 border p-3">
-        <table id="DT_load" class="table table-striped table-bordered" style="width:100%">
-            <thead>
-                <tr>
-                    <th>Champion</th>
-                    <th>Kills</th>
-                    <th>Deaths</th>
-                    <th>Assists</th>
-                </tr>
-            </thead>
-        </table>
-    </div>
 </div>
+@section Scripts{
+    <script src="~/js/matchList.js"></script>
+}
